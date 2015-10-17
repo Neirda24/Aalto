@@ -9,7 +9,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * Search
  *
  * @ORM\Table(name="search")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\SearchRepository")
  */
 class Search
 {
@@ -25,7 +25,7 @@ class Search
     /**
      * @var Answer
      *
-     * @ORM\OneToOne(targetEntity="Answer")
+     * @ORM\ManyToOne(targetEntity="Answer")
      * @ORM\JoinColumn(nullable=false)
      */
     protected $answer;
@@ -33,7 +33,7 @@ class Search
     /**
      * @var User
      *
-     * @ORM\OneToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumn(nullable=false)
      */
     protected $user;

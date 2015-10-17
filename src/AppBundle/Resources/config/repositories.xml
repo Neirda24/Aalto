@@ -14,5 +14,13 @@
                 >
             <argument>AppBundle\Entity\Answer</argument>
         </service>
+        <service
+                id="aalto.repository.search"
+                class="AppBundle\Repository\SearchRepository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                >
+            <argument>AppBundle\Entity\Search</argument>
+        </service>
     </services>
 </container>

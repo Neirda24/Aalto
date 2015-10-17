@@ -6,8 +6,9 @@
 
     <services>
         <!-- Managers -->
-        <service id="aalto.manager.answer.most_recent" class="Aalto\Bundle\ApiBundle\Manager\Answer\MostRecent">
+        <service id="aalto.manager.answer.most_recent" class="Aalto\Bundle\ApiBundle\Manager\Answer\AnswerManager">
             <argument type="service" id="aalto.repository.answer" />
+            <argument type="service" id="aalto.repository.search" />
             <argument type="service" id="router" />
         </service>
     </services>

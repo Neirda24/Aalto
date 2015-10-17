@@ -15,6 +15,7 @@ class DataLoader extends AbstractLoader
             __DIR__ . '/user.yml',
             __DIR__ . '/answer.yml',
             __DIR__ . '/comment.yml',
+            __DIR__ . '/search.yml',
         ];
     }
 }

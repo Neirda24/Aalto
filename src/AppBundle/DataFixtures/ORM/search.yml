@@ -1,0 +1,19 @@
+AppBundle\Entity\Search:
+    search_1:
+        user: @user_1
+        answer: @answer_1
+    search_2:
+        user: @user_1
+        answer: @answer_2
+    search_3:
+        user: @user_1
+        answer: @answer_2
+    search_4:
+        user: @user_1
+        answer: @answer_2
+    search_5:
+        user: @user_2
+        answer: @answer_1
+    search_6:
+        user: @user_2
+        answer: @answer_2
