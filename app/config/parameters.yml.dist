@@ -9,6 +9,7 @@ parameters:
     database_password: aalto
     # You should uncomment this if you want use pdo_sqlite
     # database_path: "%kernel.root_dir%/data.db3"
+    security.in_memory.doc.password: ChangeThePassword
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt

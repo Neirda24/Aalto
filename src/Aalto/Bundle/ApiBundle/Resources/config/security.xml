@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- Security -->
+        <service id="aalto.api.user_provider" class="Aalto\Bundle\ApiBundle\Security\ApiKeyUserProvider"/>
+        <service id="aalto.api.token_generator" class="Aalto\Bundle\ApiBundle\Security\TokenGenerator">
+            <argument>%aalto_api.security.default_token%</argument>
+        </service>
+        <service id="aalto.api.authenticator" class="Aalto\Bundle\ApiBundle\Security\ApiKeyAuthenticator">
+            <argument type="service" id="aalto.api.user_provider"/>
+            <argument type="service" id="aalto.api.token_generator"/>
+            <call method="setLogger">
+                <argument type="service" id="monolog.logger.aalto.api"/>
+            </call>
+        </service>
+    </services>
+</container>
