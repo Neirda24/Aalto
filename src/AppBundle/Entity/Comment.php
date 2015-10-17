@@ -43,6 +43,14 @@ class Comment
     protected $answer;
 
     /**
+     * @var User
+     *
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    protected $user;
+
+    /**
      * Get id
      *
      * @return integer
@@ -120,6 +128,30 @@ class Comment
     public function setAnswer(Answer $answer)
     {
         $this->answer = $answer;
+
+        return $this;
+    }
+
+    /**
+     * Get User
+     *
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set User
+     *
+     * @param User $user
+     *
+     * @return $this
+     */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
 
         return $this;
     }

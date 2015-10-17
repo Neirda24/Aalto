@@ -73,6 +73,14 @@ class Answer
     protected $comments;
 
     /**
+     * @var User
+     *
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    protected $user;
+
+    /**
      * Constructor.
      */
     public function __construct()
@@ -282,6 +290,30 @@ class Answer
     {
         $this->comments->add($comment);
         $this->nbComments++;
+
+        return $this;
+    }
+
+    /**
+     * Get User
+     *
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set User
+     *
+     * @param User $user
+     *
+     * @return $this
+     */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
 
         return $this;
     }

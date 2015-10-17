@@ -30,6 +30,14 @@ class Search
     protected $answer;
 
     /**
+     * @var User
+     *
+     * @ORM\OneToOne(targetEntity="User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    protected $user;
+
+    /**
      * Get id
      *
      * @return integer
@@ -59,6 +67,30 @@ class Search
     public function setAnswer(Answer $answer)
     {
         $this->answer = $answer;
+
+        return $this;
+    }
+
+    /**
+     * Get User
+     *
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set User
+     *
+     * @param User $user
+     *
+     * @return $this
+     */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
 
         return $this;
     }
