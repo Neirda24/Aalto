@@ -1,5 +1,6 @@
 {
     "name": "neirda24/aalto",
+    "description": "Answer project for Aalto",
     "license": "proprietary",
     "type": "project",
     "autoload": {

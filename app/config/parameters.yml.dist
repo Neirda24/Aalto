@@ -12,4 +12,4 @@ parameters:
     security.in_memory.doc.password: ChangeThePassword
 
     # A secret key that's used to generate certain security-related tokens
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            ThisADefaultSecret
