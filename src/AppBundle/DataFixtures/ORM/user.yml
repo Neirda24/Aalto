@@ -1,13 +1,25 @@
 AppBundle\Entity\User:
     user_1:
         email: email1@yopmail.com
+        firstname: firtsname1
+        surname: surname1
     user_2:
         email: email2@yopmail.com
+        firstname: firtsname2
+        surname: surname2
     user_3:
         email: email3@yopmail.com
+        firstname: firtsname3
+        surname: surname3
     user_4:
         email: email4@yopmail.com
+        firstname: firtsname4
+        surname: surname4
     user_5:
         email: email5@yopmail.com
+        firstname: firtsname5
+        surname: surname5
     user_6:
         email: email6@yopmail.com
+        firstname: firtsname6
+        surname: surname6

@@ -1,6 +1,3 @@
 aalto_api:
     resource: "@AaltoApiBundle/Controller/"
     prefix:   /api
-
-aalto_front_answer_show:
-    path: /answer/{slug}

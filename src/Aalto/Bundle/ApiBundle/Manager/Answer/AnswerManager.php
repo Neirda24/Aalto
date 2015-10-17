@@ -59,7 +59,7 @@ class AnswerManager
             $result[] = [
                 'title'       => $answer->getTitle(),
                 'description' => $answer->getDescription(),
-                'uri'         => $this->routerInterface->generate('aalto_front_answer_show', [
+                'uri'         => $this->routerInterface->generate('aalto_api_answer_show', [
                     'slug' => $answer->getSlug()
                 ]),
             ];
@@ -109,7 +109,7 @@ class AnswerManager
             $result[] = [
                 'title'       => $answerArray['title'],
                 'description' => $answerArray['description'],
-                'uri'         => $this->routerInterface->generate('aalto_front_answer_show', [
+                'uri'         => $this->routerInterface->generate('aalto_api_answer_show', [
                     'slug' => $answerArray['slug']
                 ]),
             ];
