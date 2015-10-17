@@ -283,7 +283,9 @@ class Answer
      */
     public function setComments(array $comments)
     {
-        $this->comments   = new ArrayCollection($comments);
+        foreach ($comments as $comment) {
+            $this->addComments($comment);
+        }
         $this->nbComments = $this->comments->count();
 
         return $this;
@@ -299,6 +301,7 @@ class Answer
     public function addComments(Comment $comment)
     {
         $this->comments->add($comment);
+        $comment->setAnswer($this);
         $this->nbComments++;
 
         return $this;

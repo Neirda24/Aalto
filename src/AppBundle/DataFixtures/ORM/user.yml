@@ -1,0 +1,13 @@
+AppBundle\Entity\User:
+    user_1:
+        email: email1@yopmail.com
+    user_2:
+        email: email2@yopmail.com
+    user_3:
+        email: email3@yopmail.com
+    user_4:
+        email: email4@yopmail.com
+    user_5:
+        email: email5@yopmail.com
+    user_6:
+        email: email6@yopmail.com

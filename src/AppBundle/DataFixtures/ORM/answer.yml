@@ -1,0 +1,17 @@
+AppBundle\Entity\Answer:
+    answer_1:
+        title: 'Title 1'
+        user: @user_1
+        description: 'Description 1'
+        comments:
+            - @comment_1
+            - @comment_4
+            - @comment_2
+            - @comment_5
+    answer_2:
+        title: 'Title 2'
+        user: @user_2
+        description: 'Description 2'
+        comments:
+            - @comment_3
+            - @comment_6
