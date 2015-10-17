@@ -1,3 +1,7 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+aalto_api:
+    resource: "@AaltoApiBundle/Controller/"
+    prefix:   /api
