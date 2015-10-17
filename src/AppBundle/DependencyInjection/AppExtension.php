@@ -1,6 +1,6 @@
 <?php
 
-namespace Aalto\Bundle\ApiBundle\DependencyInjection;
+namespace AppBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class AaltoApiExtension extends Extension
+class AppExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -20,12 +20,9 @@ class AaltoApiExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration();
-        $config = $this->processConfiguration($configuration, $configs);
-
-        $container->setParameter('aalto_api.security.default_token', $config['default_token']);
+        $this->processConfiguration($configuration, $configs);
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('managers.xml');
-        $loader->load('security.xml');
+        $loader->load('repositories.xml');
     }
 }
